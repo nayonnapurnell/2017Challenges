@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 # function takes input list and converts to a dictionary, key being the element and value is the count
 def single_number(input_list):
 	# return(input_list)
+=======
+"""
+To find the single number in a list.
+	Counts number of times each element is present in the list
+	prints all the elements which are present only once
+"""
+
+# function takes input list and converts to a dictionary, key being the element and value is the count
+def single_number(input_list):
+>>>>>>> fbef33f7c6a38c936c61df73d2c1c9234a650bff
 	my_dict = {}
 	for element in input_list:
 		if element in my_dict.keys():
@@ -18,6 +29,7 @@ def main():
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
 	main()
 
 
@@ -46,3 +58,6 @@ if __name__ == "__main__":
 # 		unique.append(e)	
 
 # print('Single Number values are: ',unique)
+=======
+	main()
+>>>>>>> fbef33f7c6a38c936c61df73d2c1c9234a650bff

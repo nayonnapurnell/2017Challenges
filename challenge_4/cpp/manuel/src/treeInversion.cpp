@@ -2,7 +2,11 @@
 #include <vector>
 #include <string>
 #include <sstream>
+<<<<<<< HEAD
 #include "treeInversion.h"
+=======
+#include "include/treeInversion.h"
+>>>>>>> fbef33f7c6a38c936c61df73d2c1c9234a650bff
 
 std::vector<int> stringToDigits (std::string stringDigits) {
     // Converts a string of digits (e.g. "2,0,2,3,4") to a array of integers
@@ -40,10 +44,18 @@ void build(std::vector<int> numbers, int index,
         struct node *currentNode) {
 
     currentNode->value = numbers[index];
+<<<<<<< HEAD
 
     // If left child exists, build it
     int newIndex = 2 * index + 1;
     if (newIndex < numbers.size()) {
+=======
+    int size = numbers.size();
+
+    // If left child exists, build it
+    int newIndex = 2 * index + 1;
+    if (newIndex < size) {
+>>>>>>> fbef33f7c6a38c936c61df73d2c1c9234a650bff
         currentNode->leftChild = new struct node();
 
         build(numbers, newIndex, currentNode->leftChild);
@@ -53,7 +65,11 @@ void build(std::vector<int> numbers, int index,
 
     newIndex++;
     // If right child exists, build it
+<<<<<<< HEAD
     if (newIndex < numbers.size()) {
+=======
+    if (newIndex < size) {
+>>>>>>> fbef33f7c6a38c936c61df73d2c1c9234a650bff
         currentNode->rightChild = new struct node();
 
         build(numbers, newIndex, currentNode->rightChild);

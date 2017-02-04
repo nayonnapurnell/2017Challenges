@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 Ranges
 =======
+=======
+>>>>>>> fbef33f7c6a38c936c61df73d2c1c9234a650bff
 Premise
 ------
 Given a sorted list of integers, your job is examine the list and produce an

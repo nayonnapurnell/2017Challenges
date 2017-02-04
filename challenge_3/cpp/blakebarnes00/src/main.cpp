@@ -2,11 +2,23 @@
 #include <vector>
 #include <algorithm>
 
+<<<<<<< HEAD
 void print_array(std::vector<int> array)
 {
   for(int i = 0; i < array.size(); i++)
   {
     std::cout << array.at(i) << " ";
+=======
+/*
+ * Here we call for a reference to the array (This prevents the compiler from
+ * having to recreate the same variables over again for this function.
+ */
+void print_array(std::vector<int> &array)
+{
+  for(auto i : array)
+  {
+    std::cout << i << " ";
+>>>>>>> fbef33f7c6a38c936c61df73d2c1c9234a650bff
   }
   std::cout << std::endl;
 }
@@ -29,6 +41,7 @@ int main()
   int max = array.back();
 
   /*
+<<<<<<< HEAD
    * The idea behind using the counter like this is so that we can use it in
    * more than one place. 
    *
@@ -49,6 +62,33 @@ int main()
 
   std::cout << "Majority: " << majority << std::endl;
   delete[] counter; // Deollocate the memory
+=======
+   * The counter has the max number in it, plus one so that it has a buffer
+   * space so we won't overflow.
+   */
+  std::vector<int> counter(max + 1);
+
+  for(auto i : array)
+  {
+    counter[i]++;
+  }
+
+  int majority = -1;
+  for(int i = 0; i < counter.size(); i++)
+  {
+    if(counter[i] > array.size() / 2)
+    {
+      majority = i;
+      break;
+    }
+  }
+  if(majority < 0)
+  {
+    std::cerr << "Unable to find majority number.\n";
+    return 0;
+  }
+  std::cout << "Majority: " << majority << std::endl;
+>>>>>>> fbef33f7c6a38c936c61df73d2c1c9234a650bff
 
   return 0;
 }
